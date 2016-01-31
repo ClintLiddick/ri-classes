@@ -2,7 +2,6 @@ function ee_pose = fk(q)
 if ~isvector(q) or length(q) ~= 7
     error('Input must be a vector of length 7')
 else
-    %disp(q)
     % raw translations
     base_S   = makehgtform('translate', [.75, .5, 1.0]);
     link_0_b = makehgtform('translate', [.22,.24,.346]);
