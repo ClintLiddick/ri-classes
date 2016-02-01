@@ -30,7 +30,10 @@ else
     link_4_3 = link_4_3*makehgtform('zrotate', q(5));
     link_5_4 = link_5_4*makehgtform('zrotate', q(6));
     link_6_5 = link_6_5*makehgtform('zrotate', q(7));
-    
+
+    % the above 3 sections could be combined, but this way it
+    % is clearer what represents what
+
     tool_base = base_S*link_0_b*link_1_0*link_2_1*link_3_2*link_4_3*link_5_4*link_6_5*tool_7;
     ee_pose = tool_base;
 end
