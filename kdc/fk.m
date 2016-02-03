@@ -4,7 +4,7 @@ if ~isvector(q) or length(q) ~= 7
 else
     % raw translations
     base_S   = makehgtform('translate', [.75, .5, 1.0]);
-    link_0_b = makehgtform('translate', [.22,.24,.346]);
+    link_0_b = makehgtform('translate', [.22,.14,.346]);
     link_1_0 = makehgtform('translate', [0,0,0]);
     link_2_1 = makehgtform('translate', [0,0,0]);
     link_3_2 = makehgtform('translate', [.045, 0, .55]);
@@ -15,6 +15,7 @@ else
     tool_7   = makehgtform('translate', [0,0,.12]);
 
     % add rotational transforms
+    base_S   = base_S  *makehgtform('xrotate', -pi/2);
     link_1_0 = link_1_0*makehgtform('xrotate', -pi/2);
     link_2_1 = link_2_1*makehgtform('xrotate',  pi/2);
     link_3_2 = link_3_2*makehgtform('xrotate', -pi/2);
